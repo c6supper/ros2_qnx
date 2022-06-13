@@ -1,0 +1,65 @@
+repositories:
+  apr_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/apr_vendor.git
+    version: master
+  apr_util_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/apr_util_vendor.git
+    version: master
+  bullet3_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/bullet3_vendor.git
+    version: master
+  eigen3_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/eigen3_vendor.git
+    version: master
+  libpng16_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/libpng16_vendor.git
+    version: master
+  libxslt_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/libxslt_vendor.git
+    version: master
+  log4cxx_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/log4cxx_vendor.git
+    version: master
+  lxml_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/lxml_vendor.git
+    version: master
+  foonathan_memory_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/foonathan_memory_vendor.git
+    version: master
+  netifaces_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/netifaces_vendor.git
+    version: master
+  numpy_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/numpy_vendor.git
+    version: master
+  opencv_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/opencv_vendor.git
+    version: master
+  tinyxml2_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/tinyxml2_vendor.git
+    version: master
+  yaml_cpp_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/yaml_cpp_vendor.git
+    version: master
+  pybind11_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/pybind11_vendor.git
+    version: master
+  cyclonedds_vendor:
+    type: git
+    url: https://gitlab.com/qnx/ros2/cyclonedds_vendor.git
+    version: galactic 
