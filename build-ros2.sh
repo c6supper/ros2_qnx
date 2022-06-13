@@ -4,8 +4,8 @@ set -e
 trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
 start=$(date +%s.%N)
 
-build(){
-    
+build() {
+
     if [ "${CPU}" == "aarch64" ]; then
         CPUVARDIR=aarch64le
         CPUVAR=aarch64le
@@ -26,11 +26,12 @@ build(){
         --build-base=build/${CPUVARDIR} \
         --install-base=install/${CPUVARDIR} \
         --cmake-args \
-            -DCMAKE_TOOLCHAIN_FILE="${PWD}/platform/qnx.nto.toolchain.cmake" \
-            -DBUILD_TESTING:BOOL="OFF" \
-            -DCMAKE_BUILD_TYPE="Release" \
-            -DTHIRDPARTY=FORCE \
-            --no-warn-unused-cli
+        -DCMAKE_TOOLCHAIN_FILE="${PWD}/platform/qnx.nto.toolchain.cmake" \
+        -DBUILD_TESTING:BOOL="OFF" \
+        -DCMAKE_BUILD_TYPE="Release" \
+        -DTHIRDPARTY=FORCE \
+        -DCMAKE_VERBOSE_MAKEFILE=ON \
+        --no-warn-unused-cli
 }
 
 # Set this variable according to the path of package on target
@@ -46,7 +47,7 @@ if [ -z "$CPU" ]; then
     for CPU in ${CPUS[@]}; do
         build
     done
-elif [ $CPU == "x86_64" ] || [ $CPU == "aarch64" ] ; then
+elif [ $CPU == "x86_64" ] || [ $CPU == "aarch64" ]; then
     build
 else
     echo "invalid $CPU please set arch to one of the following x86_64, armv7, or aarch64 or unset arch to build all platforms"
@@ -54,6 +55,6 @@ else
 fi
 
 duration=$(echo "$(date +%s.%N) - $start" | bc)
-execution_time=`printf "%.2f seconds" $duration`
+execution_time=$(printf "%.2f seconds" $duration)
 echo "Build Successful. Build time: $execution_time"
 exit 0
