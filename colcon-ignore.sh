@@ -34,3 +34,5 @@ touch src/ros2/tinyxml2_vendor/COLCON_IGNORE
 echo 'Ignoring yaml_cpp_vendor'
 touch src/ros2/yaml_cpp_vendor/COLCON_IGNORE
 
+# echo 'Ignoring numpy'
+# touch src/qnx_deps/numpy_vendor/COLCON_IGNORE
