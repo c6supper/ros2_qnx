@@ -36,3 +36,31 @@ touch src/ros2/yaml_cpp_vendor/COLCON_IGNORE
 
 # echo 'Ignoring numpy'
 # touch src/qnx_deps/numpy_vendor/COLCON_IGNORE
+
+echo 'Ignoring ros-visualization'
+touch src/ros-visualization/COLCON_IGNORE
+
+echo 'Ignoring ros-perception'
+touch src/ros-perception/COLCON_IGNORE
+
+echo 'Ignoring ros-planning'
+touch src/ros-planning/COLCON_IGNORE
+
+echo 'Ignoring opencv_vendor'
+touch src/qnx_deps/opencv_vendor/COLCON_IGNORE
+
+echo 'Ignoring bullet3_vendor'
+touch src/qnx_deps/bullet3_vendor/COLCON_IGNORE
+
+echo 'Ignoring cyclonedds_vendor'
+touch src/qnx_deps/cyclonedds_vendor/COLCON_IGNORE
+
+echo 'Ignoring numpy_vendor'
+touch src/qnx_deps/numpy_vendor/COLCON_IGNORE
+
+echo 'Ignoring netifaces_vendor'
+touch src/qnx_deps/netifaces_vendor/COLCON_IGNORE
+
+echo 'Ignoring rmw_connextdds'
+touch src/ros2/rmw_connextdds/COLCON_IGNORE
+

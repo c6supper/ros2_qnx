@@ -23,6 +23,7 @@ build() {
     export ARCH=${CPU}
 
     colcon build --merge-install --cmake-force-configure \
+        --parallel-workers 16 \
         --build-base=build/${CPUVARDIR} \
         --install-base=install/${CPUVARDIR} \
         --cmake-args \

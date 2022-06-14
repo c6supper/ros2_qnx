@@ -21,7 +21,7 @@ repositories:
     version: master
   libxslt_vendor:
     type: git
-    url: https://gitlab.com/qnx/ros2/libxslt_vendor.git
+    url: https://github.com/c6supper/libxslt_vendor.git
     version: master
   log4cxx_vendor:
     type: git
