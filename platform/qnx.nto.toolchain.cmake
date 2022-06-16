@@ -70,13 +70,15 @@ set(PYTHON_SOABI cpython-38)
 
 # find the host python then override the include and library directories to link against the target cross compiled binaries
 find_package(PythonInterp 3.8 REQUIRED)
-set(NUMPY_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/usr/lib/python3.8/site-packages)
+
+# set(NUMPY_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/usr/lib/python3.8/site-packages)
 set(PYTHON_INCLUDE_DIR
   ${QNX_TARGET}/usr/include/${CPUVARDIR}/python3.8
-  ${QNX_TARGET}/usr/include/python3.8
-  ${NUMPY_INSTALL_DIR}/numpy/core/include)
+  ${QNX_TARGET}/usr/include/python3.8)
+
+# ${NUMPY_INSTALL_DIR}/numpy/core/include)
 set(PYTHON_INCLUDE_DIRS PYTHON_INCLUDE_DIR)
-set(PYTHON_LIBRARY ${QNX_TARGET}/${CPUVARDIR}/usr/lib/libpython3.8.so)
+set(PYTHON_LIBRARY ${QNX_TARGET}/${CPUVARDIR}/usr/lib/libpython3.8.a)
 set(PYTHON_LIBRARIES ${QNX_TARGET}/${CPUVARDIR}/usr/lib)
 set(PYTHONLIBS_FOUND)
 set(PYTHON_MODULE_EXTENSION .cpython-38.so)
