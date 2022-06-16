@@ -34,12 +34,6 @@ touch src/ros2/tinyxml2_vendor/COLCON_IGNORE
 echo 'Ignoring yaml_cpp_vendor'
 touch src/ros2/yaml_cpp_vendor/COLCON_IGNORE
 
-# echo 'Ignoring numpy'
-# touch src/qnx_deps/numpy_vendor/COLCON_IGNORE
-
-echo 'Ignoring ros-visualization'
-touch src/ros-visualization/COLCON_IGNORE
-
 echo 'Ignoring ros-perception'
 touch src/ros-perception/COLCON_IGNORE
 
@@ -55,12 +49,31 @@ touch src/qnx_deps/bullet3_vendor/COLCON_IGNORE
 echo 'Ignoring cyclonedds_vendor'
 touch src/qnx_deps/cyclonedds_vendor/COLCON_IGNORE
 
-echo 'Ignoring numpy_vendor'
-touch src/qnx_deps/numpy_vendor/COLCON_IGNORE
+# echo 'Ignoring numpy_vendor'
+# touch src/qnx_deps/numpy_vendor/COLCON_IGNORE
 
-echo 'Ignoring netifaces_vendor'
-touch src/qnx_deps/netifaces_vendor/COLCON_IGNORE
+# echo 'Ignoring netifaces_vendor'
+# touch src/qnx_deps/netifaces_vendor/COLCON_IGNORE
 
-echo 'Ignoring rmw_connextdds'
-touch src/ros2/rmw_connextdds/COLCON_IGNORE
+# echo 'Ignoring rmw_connextdds'
+# touch src/ros2/rmw_connextdds/COLCON_IGNORE
 
+# echo 'Ignoring ignition_math6_vendor'
+# touch src/ignition/ignition_math6_vendor/COLCON_IGNORE
+
+# echo 'Ignoring orocos_kdl_vendor'
+# touch src/ros2/orocos_kdl_vendor/orocos_kdl_vendor/COLCON_IGNORE
+# touch src/ros2/orocos_kdl_vendor/python_orocos_kdl_vendor/COLCON_IGNORE
+
+# echo 'Ignoring python3 related'
+# touch src/ros2/demos/pendulum_msgs/COLCON_IGNORE
+# touch src/ros2/rcl_interfaces/builtin_interfaces/COLCON_IGNORE
+# touch src/ros2/rosidl_python/COLCON_IGNORE
+# touch src/ros2/common_interfaces/std_msgs/COLCON_IGNORE
+# touch src/ros2/rcl_interfaces/rosgraph_msgs/COLCON_IGNORE
+# touch src/ros2/rcl_interfaces/rcl_interfaces/COLCON_IGNORE
+# touch src/ros2/rcl_interfaces/test_msgs/COLCON_IGNORE
+# touch src/ros2/rcl_interfaces/statistics_msgs/COLCON_IGNORE
+# touch src/ros2/rcl_interfaces/lifecycle_msgs/COLCON_IGNORE
+# touch src/ros2/rcl_interfaces/action_msgs/COLCON_IGNORE
+# touch src/ros2/rcl_interfaces/composition_interfaces/COLCON_IGNORE

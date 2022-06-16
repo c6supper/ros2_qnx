@@ -22,6 +22,9 @@ build() {
     export CPUVARDIR CPUVAR
     export ARCH=${CPU}
 
+    cd ${PWD}/build/${CPUVAR}/yaml_cpp_vendor/yaml_cpp-prefix/src/yaml_cpp && git reset --hard && cd -
+    cd ${PWD}/build/aarch64le/apr_vendor/apr-prefix/src/apr && svn cleanup && cd -
+
     colcon build --merge-install --cmake-force-configure \
         --parallel-workers 16 \
         --build-base=build/${CPUVARDIR} \
@@ -32,6 +35,8 @@ build() {
         -DCMAKE_BUILD_TYPE="Release" \
         -DTHIRDPARTY=FORCE \
         -DCMAKE_VERBOSE_MAKEFILE=ON \
+        -DPYTHON_INCLUDE_DIR="${QNX_TARGET}/usr/include/python3.8" \
+        -DPYTHON_LIBRARY="${QNX_TARGET}/${CPUVAR}/usr/lib/libpython3.8.a" \
         --no-warn-unused-cli
 }
 
