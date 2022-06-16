@@ -49,6 +49,12 @@ touch src/qnx_deps/bullet3_vendor/COLCON_IGNORE
 echo 'Ignoring cyclonedds_vendor'
 touch src/qnx_deps/cyclonedds_vendor/COLCON_IGNORE
 
+echo 'Ignoring orocos_kdl_vendor'
+touch src/ros2/orocos_kdl_vendor/orocos_kdl_vendor/COLCON_IGNORE
+
+echo 'Ignoring python_orocos_kdl_vendor'
+touch src/ros2/orocos_kdl_vendor/python_orocos_kdl_vendor/COLCON_IGNORE
+
 # echo 'Ignoring numpy_vendor'
 # touch src/qnx_deps/numpy_vendor/COLCON_IGNORE
 

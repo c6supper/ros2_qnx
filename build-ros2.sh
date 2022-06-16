@@ -23,7 +23,9 @@ build() {
     export ARCH=${CPU}
 
     cd ${PWD}/build/${CPUVAR}/yaml_cpp_vendor/yaml_cpp-prefix/src/yaml_cpp && git reset --hard && cd -
-    cd ${PWD}/build/aarch64le/apr_vendor/apr-prefix/src/apr && svn cleanup && cd -
+    cd ${PWD}/build/${CPUVAR}/apr_vendor/apr-prefix/src/apr && svn cleanup && cd -
+    cd ${PWD}/build/${CPUVAR}/numpy_vendor/numpy-prefix/src/numpy && git reset --hard && cd -
+    cd ${PWD}/build/${CPUVAR}/netifaces_vendor/netifaces-prefix/src/netifaces && git reset --hard && cd -
 
     colcon build --merge-install --cmake-force-configure \
         --parallel-workers 16 \
