@@ -22,10 +22,21 @@ build() {
     export CPUVARDIR CPUVAR
     export ARCH=${CPU}
 
-    cd ${PWD}/build/${CPUVAR}/yaml_cpp_vendor/yaml_cpp-prefix/src/yaml_cpp && git reset --hard && cd -
-    cd ${PWD}/build/${CPUVAR}/apr_vendor/apr-prefix/src/apr && svn cleanup && cd -
-    cd ${PWD}/build/${CPUVAR}/numpy_vendor/numpy-prefix/src/numpy && git reset --hard && cd -
-    cd ${PWD}/build/${CPUVAR}/netifaces_vendor/netifaces-prefix/src/netifaces && git reset --hard && cd -
+    if [ -d "${PWD}/build/${CPUVAR}/yaml_cpp_vendor/yaml_cpp-prefix/src/yaml_cpp" ]; then
+        cd ${PWD}/build/${CPUVAR}/yaml_cpp_vendor/yaml_cpp-prefix/src/yaml_cpp && git reset --hard && cd -
+    fi
+
+    if [ -d "${PWD}/build/${CPUVAR}/apr_vendor/apr-prefix/src/apr" ]; then
+        cd ${PWD}/build/${CPUVAR}/apr_vendor/apr-prefix/src/apr && svn cleanup && cd -
+    fi
+
+    if [ -d "${PWD}/build/${CPUVAR}/numpy_vendor/numpy-prefix/src/numpy" ]; then
+        cd ${PWD}/build/${CPUVAR}/numpy_vendor/numpy-prefix/src/numpy && git reset --hard && cd -
+    fi
+
+    if [ -d "${PWD}/build/${CPUVAR}/netifaces_vendor/netifaces-prefix/src/netifaces" ]; then
+        cd ${PWD}/build/${CPUVAR}/netifaces_vendor/netifaces-prefix/src/netifaces && git reset --hard && cd -
+    fi
 
     colcon build --merge-install --cmake-force-configure \
         --parallel-workers 16 \
@@ -37,7 +48,7 @@ build() {
         -DCMAKE_BUILD_TYPE="Release" \
         -DTHIRDPARTY=FORCE \
         -DCMAKE_VERBOSE_MAKEFILE=ON \
-        -DPYTHON_INCLUDE_DIR="${QNX_TARGET}/usr/include/python3.8" \
+        -DPYTHON_INCLUDE_DIRS="${QNX_TARGET}/usr/include/python3.8:$QNX_TARGET/${CPUVAR}/usr/include/python3.8/" \
         -DPYTHON_LIBRARY="${QNX_TARGET}/${CPUVAR}/usr/lib/libpython3.8.a" \
         --no-warn-unused-cli
 }
