@@ -25,7 +25,7 @@ repositories:
     version: master
   log4cxx_vendor:
     type: git
-    url: https://gitlab.com/qnx/ros2/log4cxx_vendor.git
+    url: https://github.com/c6supper/log4cxx_vendor.git
     version: master
   lxml_vendor:
     type: git

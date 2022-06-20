@@ -38,6 +38,16 @@ build() {
         cd ${PWD}/build/${CPUVAR}/netifaces_vendor/netifaces-prefix/src/netifaces && git reset --hard && cd -
     fi
 
+    if [ -d "${PWD}/build/${CPUVAR}/apr_vendor" ]; then
+        rm -rf ${PWD}/build/${CPUVAR}/apr_vendor/
+    fi
+
+    if [ -d "${PWD}/build/${CPUVAR}/lxml_vendor" ]; then
+        rm -rf ${PWD}/build/${CPUVAR}/lxml_vendor/
+    fi
+
+    find src -name CMakeLists.txt -exec sed -i "s/nto-qnx7.1.0/nto-qnx7.0.0/g" {} +
+
     colcon build --merge-install --cmake-force-configure \
         --parallel-workers 16 \
         --build-base=build/${CPUVARDIR} \
