@@ -55,6 +55,42 @@ touch src/ros2/orocos_kdl_vendor/orocos_kdl_vendor/COLCON_IGNORE
 echo 'Ignoring python_orocos_kdl_vendor'
 touch src/ros2/orocos_kdl_vendor/python_orocos_kdl_vendor/COLCON_IGNORE
 
+echo 'Ignoring rclpy'
+touch src/ros2/rclpy/COLCON_IGNORE
+
+echo 'Ignoring examples'
+touch src/ros2/examples/COLCON_IGNORE
+
+echo 'Ignoring rclcpp, because relies on c++17'
+touch src/ros2/rclcpp/COLCON_IGNORE
+touch src/ros2/rosbag2/rosbag2_test_common/COLCON_IGNORE
+touch src/ros2/ros2cli/ros2cli_test_interfaces/COLCON_IGNORE
+touch src/ros2/demos/action_tutorials/COLCON_IGNORE
+touch src/ros2/realtime_support/tlsf_cpp/COLCON_IGNORE
+touch src/ros2/demos/logging_demo/COLCON_IGNORE
+touch src/ros2/demos/demo_nodes_cpp/COLCON_IGNORE
+touch src/ros2/examples/rclcpp/composition/COLCON_IGNORE
+touch src/ros2/demos/demo_nodes_cpp_native/COLCON_IGNORE
+touch src/ros2/rosbag2/rosbag2_cpp/COLCON_IGNORE
+touch src/ros2/demos/lifecycle/COLCON_IGNORE
+touch src/ros2/demos/dummy_robot/dummy_map_server/COLCON_IGNORE
+touch src/ros2/message_filters/COLCON_IGNORE
+touch src/ros2/demos/topic_statistics_demo/COLCON_IGNORE
+touch src/ros2/demos/intra_process_demo/COLCON_IGNORE
+touch src/ros2/demos/dummy_robot/dummy_sensors/COLCON_IGNORE
+touch src/ros2/demos/quality_of_service_demo/COLCON_IGNORE
+touch src/ros2/demos/image_tools/COLCON_IGNORE
+touch src/ros2/rosbag2/COLCON_IGNORE
+touch src/ros2/demos/composition/COLCON_IGNORE
+touch src/ros2/geometry2/tf2_ros_py/COLCON_IGNORE
+touch src/ros2/geometry2/tf2_ros_py/tf2_ros/COLCON_IGNORE
+touch src/ros2/geometry2/tf2_ros/COLCON_IGNORE
+touch src/ros2/ros1_bridge/COLCON_IGNORE
+touch src/ros2/geometry2/tf2_sensor_msgs/COLCON_IGNORE
+touch src/ros/robot_state_publisher/COLCON_IGNORE
+touch src/ros2/geometry2/COLCON_IGNORE
+# touch src/ros2/launch/test_launch_testing/COLCON_IGNORE
+
 # echo 'Ignoring numpy_vendor'
 # touch src/qnx_deps/numpy_vendor/COLCON_IGNORE
 

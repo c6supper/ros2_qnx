@@ -38,12 +38,12 @@ build() {
         cd ${PWD}/build/${CPUVAR}/netifaces_vendor/netifaces-prefix/src/netifaces && git reset --hard && cd -
     fi
 
-    if [ -d "${PWD}/build/${CPUVAR}/apr_vendor" ]; then
-        rm -rf ${PWD}/build/${CPUVAR}/apr_vendor/
+    if [ -d "${PWD}/build/${CPUVAR}/apr_vendor/apr-prefix/src/apr" ]; then
+        cd ${PWD}/build/${CPUVAR}/apr_vendor/apr-prefix/src/apr && svn revert -R * && cd -
     fi
 
-    if [ -d "${PWD}/build/${CPUVAR}/lxml_vendor" ]; then
-        rm -rf ${PWD}/build/${CPUVAR}/lxml_vendor/
+    if [ -d "${PWD}/build/${CPUVAR}/lxml_vendor/lxml-prefix/src/lxml" ]; then
+        cd ${PWD}/build/${CPUVAR}/lxml_vendor/lxml-prefix/src/lxml && git reset --hard && cd -
     fi
 
     find src -name CMakeLists.txt -exec sed -i "s/nto-qnx7.1.0/nto-qnx7.0.0/g" {} +
