@@ -89,6 +89,7 @@ touch src/ros2/ros1_bridge/COLCON_IGNORE
 touch src/ros2/geometry2/tf2_sensor_msgs/COLCON_IGNORE
 touch src/ros/robot_state_publisher/COLCON_IGNORE
 touch src/ros2/geometry2/COLCON_IGNORE
+touch src/ros2/ros2cli/ros2lifecycle_test_fixtures/COLCON_IGNORE
 # touch src/ros2/launch/test_launch_testing/COLCON_IGNORE
 
 # echo 'Ignoring numpy_vendor'
